@@ -24,8 +24,8 @@ import datetime
 def usage():
     print("\nYou should provide these options and arguments: \n")
     print(" Options       Arguments \n")
-    print(" --input       path to RGB input data folder")
-    print(" --target      path to segmented data folder")
+    print(" --input       path to input data folder")
+    print(" --target      path to target data folder")
     print(" --save        path to save the model, directories are created if needed")
     print(" --modelType   Vnet2D")
     print(" --epochs      positive integer")
@@ -57,7 +57,7 @@ def parsing(argv):
         idx = optionsList.index(inputOpt)
     else :
         print("You should provide an input option as follows")
-        print(" --input       path to RGB input data folder")
+        print(" --input       path to input data folder")
         usage()
         sys.exit()
     inputArg = argumentsList[idx]
@@ -74,7 +74,7 @@ def parsing(argv):
         idx = optionsList.index(targetOpt)
     else :
         print("You should provide a target option as follows")
-        print(" --target      path to segmented data folder")
+        print(" --target      path to target data folder")
         usage()
         sys.exit() 
     targetArg = argumentsList[idx]
