@@ -44,7 +44,6 @@ def buildImagesFrom2D(model, inputArg, outputFolderArg):
         zeroSubImage = torch.zeros(batchPatch, channelPatch, heightPatch, widthPatch)
 
         for i, patch in enumerate(patchesDataloader):
-            print("len",patch[2])
             with torch.no_grad():
                 zeroSubImage[i] = model(patch[0].float().cuda())                             
 
