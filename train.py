@@ -173,7 +173,7 @@ def main(argv):
 
     if modelTypeArg == "Vnet2D":
         from models.vnet2D import Vnet2D, trainModel
-        outputName = modelTypeArg + ":" + str(epochsArg) + "Ep:"
+        outputName = modelTypeArg + ":" + str(epochsArg) + "Ep"
         model = trainModel(Vnet2D(), epochsArg, inputArg, targetArg, device, saveArg, outputName)
         torch.save(model.state_dict(), os.path.join(saveArg, MDHMS + outputName + ".pt"))
 
