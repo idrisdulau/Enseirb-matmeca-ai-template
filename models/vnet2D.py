@@ -195,7 +195,7 @@ def run(mode, tensorDataloader, model, optimizer, device, currentLoss, meanLossL
 
     #region command line display of metrics informations
     print()
-    print('Epoch %3d/%3d, training loss: %6.4f' % (epoch, epochs, epochLoss))
+    print("Epoch %3d/%3d, "+mode+"loss: %6.4f" % (epoch, epochs, epochLoss))
     print("Average per patch(%d) tp: %d | fp: %d | fn: %d | tn: %d | tp+tn+fp+fn: %d | tp+fn: %d | tp Expected: %d"  % \
     (processedPatches, tp/processedPatches , fp/processedPatches , fn/processedPatches , tn/processedPatches, (tp+tn+fp+fn)/processedPatches, (tp+fn)/processedPatches, int(foregroundPixels/processedPatches) ) )
     #endregion
